@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(assets/bg.jpg);
+    background-position:  top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+    
+}
+header {
+    padding-top: 32px;
+    height: 152px;
+}
+header div {
+    margin: auto;
+    width: 120px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding: 4px;
+    display: flex;
+    border-radius: 50%;
+    transition: transform .3s;
+}
+header div img {
+    width: 100%;
+    border-radius: 50%;
+}
+header div:hover {
+    transform: scale(1.1);
+}
+ul {
+    margin-top: 24px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    
+}
+section ul li {
+    transition: transform 0.3s;
+}
+section ul li:hover {
+    transform: scale(1.1);
+}
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    display: grid;
+    gap: 24px;
+    
+}
+main h2 {
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0.47px;
+}
+main p {
+    color: #A1A1AA;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.18px;
+}
+.game-list img {
+    border-radius: 8px;
+    width: 90px;
+}
+.streamers-list img {
+    border-radius: 50%;
+    width: 70px;
+}
+section {
+    padding-top: 4px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 10px;
+}
+section div {
+    background-color: #2A2634;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+/*animation*/ 
+
+header div {
+    animation: fromtop 1s 0.4s backwards; 
+}
+main section {
+    animation: frombottom 1s backwards;
+}
+main section:nth-child(1) {
+    animation-delay: 0s;
+}
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+main section:nth-child(3) {
+    animation-delay: .7s;
+}
+@keyframes fromtop {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes frombottom {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
